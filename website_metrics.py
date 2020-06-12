@@ -36,7 +36,7 @@ for x in range(0, len(df)):
     print(f'processing url: {url}')
 
     # Make request
-    pagespeed_results = urllib.request.urlopen('https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url={}&strategy=mobile&key=AIzaSyBF1tbpB0rsMnOVDxdlhjZ5Dch67wFy89E'.format(url)).read().decode('UTF-8')
+    pagespeed_results = urllib.request.urlopen('https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url={}&strategy=mobile'.format(url)).read().decode('UTF-8')
 
     # Convert to json format
     pagespeed_results_json = json.loads(pagespeed_results)
